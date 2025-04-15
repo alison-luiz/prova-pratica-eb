@@ -6,6 +6,7 @@ public class PessoaDTO {
     private String nome;
     private String email;
     private Long trabalhoId;
+    private String trabalhoDescricao;
 
     public Long getId() {
         return id;
@@ -37,5 +38,13 @@ public class PessoaDTO {
 
     public void setTrabalhoId(Long trabalhoId) {
         this.trabalhoId = trabalhoId;
+    }
+
+    public String getTrabalhoDescricao() {
+        return trabalhoDescricao;
+    }
+
+    public void setTrabalhoDescricao(String trabalhoDescricao) {
+        this.trabalhoDescricao = trabalhoDescricao;
     }
 }

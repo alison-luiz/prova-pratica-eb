@@ -28,6 +28,7 @@ public class PessoaService {
                     dto.setNome(pessoa.getNome());
                     dto.setEmail(pessoa.getEmail());
                     dto.setTrabalhoId(pessoa.getTrabalho().getId());
+                    dto.setTrabalhoDescricao(pessoa.getTrabalho().getDescricao());
                     return dto;
                 }).collect(Collectors.toList());
     }
@@ -43,6 +44,7 @@ public class PessoaService {
 
         Pessoa pessoaSalva = pessoaRepository.save(pessoa);
         pessoaDTO.setId(pessoaSalva.getId());
+        pessoaDTO.setTrabalhoDescricao(trabalho.getDescricao());
         return pessoaDTO;
     }
 
